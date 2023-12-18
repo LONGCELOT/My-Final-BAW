@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../img/Bawlogo.png">
+    <link rel="stylesheet" href="../Style/Contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Hanuman:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <img src="../img/Blacklogo.jpg" alt="" height="80px">
+            <img src="../img/Baw.png" alt="" height="50px">
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li class="home"><a href="E-home.html" style="font-family: 'Hanuman', serif;">Home</a></li>
+                <li>
+                    <a href="E-Video.html" style="font-family: 'Hanuman', serif;" class="click">Video</a>
+                </li>
+                
+                <li>
+                    <a href="E-About.html" style="font-family: 'Hanuman', serif;">About</a>
+                </li>
+                <li>
+                    <a href="E-Contact.html" style="font-family: 'Hanuman', serif;"  class="active">Contact</a>
+                </li>
+                <li>
+                    <a href="E-News.html" id="bell">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="E-Login.html" id="account-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="Contact.html" id="flag-icon">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </li>     
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+    <!-- Content -->
+    <span style="font-family: 'Hanuman', serif;">
+        <div class="contact-box">
+            <h2>Send us message here!</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name">
+          
+              <label for="email-phone">Email or Phone:</label>
+              <input type="text" id="email-phone" name="email-phone" placeholder="Enter your email or phone number">
+          
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+       </span>
+
+       <br><br><br>
+
+       <footer>
+        <ul id="socialIcon" class="social-icons-center social-icons-wrapper">
+            <a href="#" class="fb"><i class="fab fa-facebook-f" title="Facebook"></i></a>
+            <a href="#" class="tg"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="tk"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+        </ul>
+        
+       </footer>
+   
+
+
+</body>
+</html>

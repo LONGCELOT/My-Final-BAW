@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../img/Bawlogo.png">
+    <link rel="stylesheet" href="../Style/Quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Hanuman:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <img src="../img/Blacklogo.jpg" alt="" height="80px">
+            <img src="../img/Baw.png" alt="" height="50px">
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li class="home"><a href="../index.html" style="font-family: 'Hanuman', serif;" class="active">ទំព័រដើម</a></li>
+                <li>
+                    <a href="Video.html" style="font-family: 'Hanuman', serif;" class="click">វីដេអូ</a>
+                </li>
+                
+                <li>
+                    <a href="About.html" style="font-family: 'Hanuman', serif;">អំពីពួកយើង</a>
+                </li>
+                <li>
+                    <a href="Contact.html" style="font-family: 'Hanuman', serif;">ទំនាក់ទំនង</a>
+                </li>
+                <li>
+                    <a href="News.html" id="bell">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="Login.html" id="account-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="E-home.html" id="flag-icon">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </li>     
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+    <!-- Content -->
+    <div class="quizbox">
+        <!-- <div id="result"></div> -->
+        <h3 style="font-family: 'Hanuman', serif;">គណនាលីមីតខាងក្រោម​</h3>
+       <form id="mcq-form" style="font-family: 'Hanuman', serif;">
+       <h6>Question 1:</h6>
+       <p style="text-align: left;">
+       <div class="equation-container">
+       $$\lim_{x \to 0} \frac{{\sqrt{{x^2 + 1}} - 1}}{{x^2}}$$
+       </div>             
+       </p>
+       <input type="radio" name="q1" value="ក"> ក) 1<br>
+       <input type="radio" name="q1" value="ខ"> ខ) 1/2<br>
+       <input type="radio" name="q1" value="គ"> គ) 0<br>
+       <br>
+       <h6>Question 2:</h6>
+       <p style="text-align: left;">
+       <div class="equation-container">
+       $$\lim_{x \to 1} \frac{{\sqrt{{x^2 + 3}} - 2}}{{x-1}}$$
+       </div>             
+       </p>
+       <input type="radio" name="q2" value="ក"> ក) 1/2<br>
+       <input type="radio" name="q2" value="ខ"> ខ) 0<br>
+       <input type="radio" name="q2" value="គ"> គ) 3<br>
+       <br>
+       <h6>Question 3:</h6>
+       <p style="text-align: left;">
+       <div class="equation-container">
+       $$\lim_{x \to 0} \frac{{\sqrt{{1+x}} -\sqrt{{1-x}}}}{{x}}$$
+       </div>             
+       </p>
+       <input type="radio" name="q3" value="ក"> ក) 0<br>
+       <input type="radio" name="q3" value="ខ"> ខ) 1<br>
+       <input type="radio" name="q3" value="គ"> គ) 6<br>
+       <br>
+       <input type="submit" value="Submit">
+       <br>
+       <div id="result"></div>
+       </form>
+       </div>
+       
+
+       <style>
+       .resultDiv {
+         display: block;
+       }
+       </style>
+       
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+       <script>
+       const quiz = document.getElementById("mcq-form");
+const resultDiv = document.getElementById("result");
+
+quiz.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const answers = {
+    q1: quiz.querySelector("[name='q1']:checked").value,
+    q2: quiz.querySelector("[name='q2']:checked").value,
+    q3: quiz.querySelector("[name='q3']:checked").value,
+  };
+
+  const correctAnswers = {
+    q1: "ខ",
+    q2: "ក",
+    q3: "ខ",
+  };
+
+  let score = 0;
+  for (const key in answers) {
+    if (answers[key] === correctAnswers[key]) {
+      score+=5;
+    }
+  }
+
+  resultDiv.innerHTML = `ពិន្ទុរបស់អ្នក: ${score}/15.`;
+
+  const rightAnswers = Object.keys(correctAnswers).map(key => correctAnswers[key]);
+
+  if (score !== 15) {
+    resultDiv.innerHTML += `\n\nចម្លើយដែលត្រឹមត្រូវគឺ: ${rightAnswers}`;
+  }
+});
+
+       </script>
+
+
+
+</body>
+</html>

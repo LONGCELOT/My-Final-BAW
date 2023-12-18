@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../img/Bawlogo.png">
+    <link rel="stylesheet" href="../Style/Login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Hanuman:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <img src="../img/Blacklogo.jpg" alt="" height="80px">
+            <img src="../img/Baw.png" alt="" height="50px">
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li class="home"><a href="E-home.html" style="font-family: 'Hanuman', serif;">Home</a></li>
+                <li>
+                    <a href="E-Video.html" style="font-family: 'Hanuman', serif;" class="click">Video</a>
+                </li>
+                
+                <li>
+                    <a href="E-About.html" style="font-family: 'Hanuman', serif;">About</a>
+                </li>
+                <li>
+                    <a href="E-Contact.html" style="font-family: 'Hanuman', serif;">Contact</a>
+                </li>
+                <li>
+                    <a href="E-News.html" id="bell">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="E-Login.html" id="account-icon"  class="active">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="Login.html" id="flag-icon">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </li>     
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+    <!-- Login -->
+    <div class="center">
+        <br>
+        <h1>Login</h1>
+
+        <form method="post">
+            <span>
+                <div class="txt_field">
+                    <input type="text" required>
+                    <label>Email/Phone-Number</label>
+    
+                </div>
+            </span>
+            
+            <span>
+                <div class="txt_field">
+                    <input type="password" required>
+                    <label>Password</label>        
+                </div>
+            </span>
+
+            <span>
+                <div class="txt_field">
+                    <input type="password" required>
+                    <label>Confirm Password</label>        
+                </div>
+            </span>
+            
+
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="Signup.html">Signup</a>
+            </div>
+
+        </form>
+
+    </div>
+   
+    
+
+
+</body>
+</html>
